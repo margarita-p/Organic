@@ -1,0 +1,71 @@
+.page-header {
+  position: relative;
+  width: 100%;
+  min-height: 918px;
+  background-color: #f9f9f9;
+  background-image: url("../img/organic.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
+  }
+  &::before {
+    height: 65px;
+    background-image: url("../img/mask1.svg");
+    opacity: 0.5;
+    z-index: 1;
+  }
+  &::after {
+    height: 55px;
+    background-image: url("../img/mask2.svg");
+    z-index: 2;
+  }
+}
+
+.page-header__wrapper {
+  .wrapper();
+  @media (min-width: 1600px) {
+    position: relative;
+    padding-left: 320px;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 21px;
+  left: 25px;
+  display: block;
+  width: 73px;
+  height: 73px;
+}
+
+.page-header__promo {
+  width: 400px;
+  margin-top: 142px;
+  margin-left: 10px;
+  padding-bottom: 150px;
+  color: #fff;
+  p {
+    .font-primary-normal();
+    margin: 0;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    text-shadow: 0 1px 3px #5c94a3;
+  }
+}
+
+.page-header__title {
+  .font-primary-light();
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 52px;
+  line-height: 1.2;
+  text-shadow: 0 1px 1px #5c94a3;
+}

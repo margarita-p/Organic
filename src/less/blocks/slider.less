@@ -1,0 +1,67 @@
+.slider {
+  width: 310px;
+  margin-right: 60px;
+  padding-bottom: 20px;
+  border-right: 1px solid @palette-border;
+}
+
+.slider__item {
+  .font-primary-italic();
+  position: relative;
+  padding-right: 60px;
+  font-size: 20px;
+  color: @palette-primary;
+  svg {
+    width: 11px;
+    height: 10px;
+    fill: @palette-primary;
+    &:first-child {
+      position: absolute;
+      top: -20px;
+      left: 0;
+    }
+    &:last-child {
+      position: relative;
+      top: 25px;
+      left: 5px;
+    }
+  }
+}
+
+.slider__control {
+  display: flex;
+  margin-top: 88px;
+  margin-left: 187px;
+}
+
+.slider__toggle {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: @palette-primary;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  svg {
+    width: 6px;
+    height: 10px;
+    fill: #fff;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: fade(@palette-primary, 70%);
+  }
+  &:active {
+    background-color: fade(@palette-primary, 30%);
+  }
+  &--disabled {
+    background-color: fade(@palette-primary, 30%);
+    cursor: default;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: fade(@palette-primary, 30%);
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.main-nav {
+  padding-top: 38px;
+}
+
+.main-nav__list {
+  .list-none();
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.main-nav__item {
+  .font-primary-bold();
+  margin-right: 50px;
+  padding: 10px 0;
+  font-size: 15px;
+  a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &:hover > a,
+  &:focus > a, {
+    text-decoration: underline;
+  }
+  &:active > a {
+    color: fade(#fff, 70%);
+  }
+  &--primary {
+    position: relative;
+    margin-right: 55px;
+    padding-right: 20px;
+  }
+  &--primary::after {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 4px solid #ffffff;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+  }
+  &--active {
+    a {
+      text-decoration: underline;
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.main-nav__item--primary:last-оf-name {
+  background-color: red;
+}
+
+.main-nav__list-secondary {
+  .list-none();
+  .font-primary-normal();
+  position: absolute;
+  top: 35px;
+  font-size: 15px;
+  display: none;
+}
+
+.main-nav__item-secondary {
+  padding: 3px 0;
+  a {
+    &:hover,
+    &:focus,
+    &:active {
+      color: fade(#fff, 70%);
+    }
+  }
+}
+
+.main-nav__item:hover .main-nav__list-secondary,
+.main-nav__list-secondary:hover {
+  display: block;
+}
